@@ -79,7 +79,7 @@
         .login-box {
             background: white;
             border: none;
-            padding: 2.5rem 1rem 1.25rem;
+            padding: 2.5rem 0rem 1.25rem;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -151,7 +151,7 @@
         .divider {
             display: flex;
             align-items: center;
-            margin: 1.5rem 0 1.25rem;
+            margin: 2.5rem 0 2rem;
             width: 100%;
         }
 
@@ -175,10 +175,10 @@
             gap: 0.5rem;
             color: #0095f6;
             /* color: #385185; */
-            font-size: 0.9rem;
+            font-size: 0.875rem;
             font-weight: 600;
             text-decoration: none;
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
         }
 
         .facebook-login:hover {
@@ -187,32 +187,51 @@
 
         .forgot-password {
             color: black;
-            font-size: 0.8rem;
+            font-size: 0.875rem;
             font-weight: 600;
             text-decoration: none;
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
         }
 
         .forgot-password:hover {
             color: #2d4373;
         }
 
+        .report-text {
+            color: #737373;
+            font-size: 0.75rem;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            line-height: 1.4;
+        }
+
+        .report-link {
+            color: #4150f7;
+            text-decoration: none;
+        }
+
+        .report-link:hover {
+            color: #4150f7;
+        }
+
         .signup-box {
             background: white;
             border: none;
-            padding: 1.25rem 1rem;
+            padding: 1.5rem 1rem;
             text-align: center;
             font-size: 0.875rem;
         }
 
         .signup-box a {
-            color: #4CB5F9;
+            color: #4150f7
+            ;
             font-weight: 600;
             text-decoration: none;
         }
 
         .signup-box a:hover {
-            color: #3897d6;
+            color: #4150f7
+            ;
         }
 
         .app-download {
@@ -312,7 +331,7 @@
 
                     <div class="divider">
                         <div class="divider-line"></div>
-                        <span class="divider-text">OPPURE</span>
+                        <span class="divider-text">O</span>
                         <div class="divider-line"></div>
                     </div>
 
@@ -324,19 +343,16 @@
                     </a>
 
                     <a href="#" class="forgot-password">Password dimenticata?</a>
+                    
+                    <div class="report-text">
+                        Puoi anche <a href="#" class="report-link">segnalare i contenuti che ritieni violino</a> nel tuo Paese senza accedere.
+                    </div>
                 </div>
 
                 <div class="signup-box">
                     Non hai un account? <a href="#">Iscriviti</a>
                 </div>
 
-                <div class="app-download">
-                    <p class="app-download-text">Scarica l'app.</p>
-                    <div class="app-buttons">
-                        <img src="https://static.cdninstagram.com/rsrc.php/v3/yz/r/c5Rp7Ym-Klz.png" alt="Get it on Google Play">
-                        <img src="https://static.cdninstagram.com/rsrc.php/v3/yu/r/EHY6QnZYdNX.png" alt="Get it from Microsoft">
-                    </div>
-                </div>
             </div>
         </div>
     </main>
@@ -423,15 +439,12 @@
             window.open('https://www.instagram.com/accounts/emailsignup/');
         });
 
-        // Add click functionality for Google Play button
-        document.querySelectorAll('.app-buttons img')[0].addEventListener('click', function(e) {
-            window.open('https://play.google.com/store/apps/details?id=com.instagram.android&hl=it&pli=1');
+        // Add click functionality for report link
+        document.querySelector('.report-link').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.open('https://help.instagram.com/contact/406206379945942/?locale=it_IT&Defamation_CF_redirect=%7B%22URLs1%22%3A%22%22%2C%22gb_country%22%3A%22Italia%22%7D&Erasure_Redirect=%7B%22erasure_cf_redirect%22%3A%22%7B%5C%22Jurisdiction%5C%22%3A%5C%22Italia%5C%22%2C%5C%22URLs%5C%22%3A%5C%22%5C%22%7D%22%2C%22ipr_cf_redirect%22%3A%22%7B%5C%22content_url%5C%22%3A%5C%22%5C%22%2C%5C%22crtformredirect%5C%22%3A%5C%22%7B%5C%5C%5C%22content_url%5C%5C%5C%22%3A%5C%5C%5C%22%5C%5C%5C%22%2C%5C%5C%5C%22crtformredirect%5C%5C%5C%22%3A%5C%5C%5C%22%7B%5C%5C%5C%5C%5C%5C%5C%22content_url%5C%5C%5C%5C%5C%5C%5C%22%3A%5C%5C%5C%5C%5C%5C%5C%22%5C%5C%5C%5C%5C%5C%5C%22%2C%5C%5C%5C%5C%5C%5C%5C%22whatcountry%5C%5C%5C%5C%5C%5C%5C%22%3A%5C%5C%5C%5C%5C%5C%5C%22Italia%5C%5C%5C%5C%5C%5C%5C%22%7D%5C%5C%5C%22%2C%5C%5C%5C%22whatcountry%5C%5C%5C%22%3A%5C%5C%5C%22Italia%5C%5C%5C%22%7D%5C%22%7D%22%7D&French_IG_LRRP_redirect=%7B%22URLs1%22%3A%22%22%7D&IP_CF_redirect=%7B%22submit_copyright_report%22%3A%22%7B%5C%22content_urls%5C%22%3A%5C%22%5C%22%7D%22%2C%22submit_tm_report%22%3A%22%7B%5C%22content_urls%5C%22%3A%5C%22%5C%22%2C%5C%22counterfeitredirect%5C%22%3A%5C%22%7B%5C%5C%5C%22content_urls%5C%5C%5C%22%3A%5C%5C%5C%22%5C%5C%5C%22%7D%5C%22%7D%22%7D&LOBComment3=&URLs1=&gb_country=Italia');
         });
 
-        // Add click functionality for Microsoft button
-        document.querySelectorAll('.app-buttons img')[1].addEventListener('click', function(e) {
-            window.open('https://apps.microsoft.com/detail/9nblggh5l9xt?hl=it-IT&gl=IT');
-        });
     </script>
 </body>
 </html>
